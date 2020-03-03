@@ -12,4 +12,4 @@ sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generat
 #git clone https://github.com/Leo-Jo-My/my package/my
 git clone https://github.com/Leo-Jo-My/luci-app-vssr package/luci-app-vssr
 git clone https://github.com/Leo-Jo-My/my package/my
-make package/luci-app-vssr/{clean,compile} V=s
+#make package/luci-app-vssr/{clean,compile} V=s

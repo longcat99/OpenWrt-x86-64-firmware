@@ -7,7 +7,7 @@
 #=================================================
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
-cat >>feeds.conf.default<<EOF
+cat >> feeds.conf.default<<EOF
 > src-git lienol https://github.com/Lienol/openwrt-package
 >EOF
 run: cd openwrt && ./scripts/feeds update -a

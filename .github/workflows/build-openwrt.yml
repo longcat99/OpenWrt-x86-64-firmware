@@ -115,3 +115,12 @@ jobs:
       with:
         name: OpenWrt_firmware
         path: ${{ env.FIRMWARE }}
+
+#=================================================================================
+
+    - name: Upload dl directory
+      uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: OpenWrt_dl
+        path: openwrt/dl

@@ -100,6 +100,13 @@ jobs:
         name: OpenWrt_directory
         path: openwrt/bin
 
+    - name: Upload dl directory
+      uses: actions/upload-artifact@master
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_dl_DIR == 'true'
+      with:
+        name: OpenWrt_directory
+        path: openwrt/dl
+
     - name: Organize files
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()

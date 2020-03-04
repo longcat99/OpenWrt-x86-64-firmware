@@ -124,3 +124,11 @@ jobs:
       with:
         name: OpenWrt_dl
         path: openwrt/dl
+
+#====================================================
+    #- name: 自定义插件
+      #run: |
+        #cd openwrt
+        #git clone  https://github.com/zxlhhyccc/bf-package.git package/openwrt-package
+#====================================================
+

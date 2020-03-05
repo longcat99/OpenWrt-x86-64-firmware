@@ -145,3 +145,21 @@ jobs:
         #git clone  https://github.com/zxlhhyccc/bf-package.git package/openwrt-package
 #==================================================================================
 
+    #- name: 涡轮增雕进程
+      #run: |
+        #cd package
+        #mkdir openwrt-packages
+        #cd openwrt-packages
+        #git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
+
+        # LuCI主题:
+        #cat >> .config <<EOF
+        #CONFIG_PACKAGE_luci-i18n-kcptun-zh-cn=y
+        #CONFIG_PACKAGE_luci-i18n-trojan-server-zh-cn=y
+        #CONFIG_PACKAGE_luci-app-kcptun=y
+        #CONFIG_PACKAGE_luci-i18n-trojan-server-zh-cn=y
+        #EOF
+
+#==================================================================================
+
+

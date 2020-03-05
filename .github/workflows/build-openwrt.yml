@@ -117,7 +117,6 @@ jobs:
         path: ${{ env.FIRMWARE }}
 
 #=================================================================================
-
     - name: Upload dl directory
       uses: actions/upload-artifact@master
       if: always()
@@ -125,10 +124,22 @@ jobs:
         name: OpenWrt_dl
         path: openwrt/dl
 
-#====================================================
+    - name: Upload packages directory
+      uses: actions/upload-artifact@master
+      with:
+        name: OpenWrt_bin_packages
+        path: openwrt/bin/packages
+
+    - name: Upload targets directory
+      uses: actions/upload-artifact@master
+      with:
+        name: OpenWrt_bin_targets
+        path: openwrt/bin/targets
+
+#==================================================================================
     #- name: 自定义插件
       #run: |
         #cd openwrt
         #git clone  https://github.com/zxlhhyccc/bf-package.git package/openwrt-package
-#====================================================
+#==================================================================================
 

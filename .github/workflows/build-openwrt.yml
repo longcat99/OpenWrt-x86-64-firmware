@@ -55,8 +55,10 @@ jobs:
     - name: Clone source code
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
+#================添加lienol源===================================================================================================================================
     #- name: Add Lienol packages
       #run: cd openwrt && echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf.default && cat feeds.conf.default
+#===============================================================================================================================================================
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
@@ -116,7 +118,7 @@ jobs:
         name: OpenWrt_firmware
         path: ${{ env.FIRMWARE }}
 
-#=================================================================================
+#===========其他diy上传==============================================================
     - name: Upload dl directory
       uses: actions/upload-artifact@master
       if: always()
